@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 3.5.2
+
 ### Bug fix
 * Do not call `#send` in form object to check whether the attribute is a file input.
 

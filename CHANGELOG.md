@@ -1,5 +1,17 @@
 ## Unreleased
 
+### Bug fix
+* Do not call `#send` in form object to check whether the attribute is a file input.
+
+### Deprecations
+* The config `SimpleForm.file_methods` is deprecated and it has no effect. Simple Form now supports automatically discover of file inputs for the following Gems: activestorage, carrierwave, paperclip, refile and shrine. If you are using a custom method that is not from one of the supported Gems, please change your forms to pass the input type explicitly:
+
+```erb
+ <%= form.input :avatar, as: :file %>
+ ```
+
+See http://blog.plataformatec.com.br/2019/09/incorrect-access-control-in-simple-form-cve-2019-16676 for more information.
+
 ## 3.5.1
 
 ### Enhancements
